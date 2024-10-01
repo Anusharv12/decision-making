@@ -246,6 +246,21 @@ L1'''
 
 Ans:
 
+a = int(input())  # Capacity of L1
+b = int(input())  # Capacity of L2
+c = int(input())  # Capacity of L3
+allocated_lab = input().strip()  # Lab allocated for ACE training
+lab_capacities = {
+    "L1": a,
+    "L2": b,
+    "L3": c
+}
+if allocated_lab in lab_capacities:
+    del lab_capacities[allocated_lab]
+min_lab = min(lab_capacities, key=lab_capacities.get)
+print(min_lab)
+
+
 
 
 '''9)
