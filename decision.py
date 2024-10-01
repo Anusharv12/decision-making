@@ -117,6 +117,122 @@ elif profit_or_loss < 0:
 else:
   print("No Profit No Loss")
 
+'''5) 
+Write a program to determine the fee amount to be collected from a student. 
+Refer the table below for fee details.
+  Student Type  
+  Student Type denoted as  
+  Fee Details  
+Merit Seat Day Scholar
+MSDS
+
+Tuition fee + Bus fee
+
+
+
+Merit Seat Hosteller
+MSH
+Tuition fee + Hostel fee
+
+Management Seat Day Scholar
+
+MGSDS
+150% of Tuition fee + Bus fee
+Management Seat Hosteller
+MGSH
+150% of Tuition fee + Hostel fee
+
+Input format:
+The first input corresponds to the student type
+The second input corresponds to the tuition fee
+The third input corresponds to the bus fee or hostel fees
+Output format:
+Print the total fee amount of the corresponding student with 2 decimal places.
+Refer below sample output for formatting
+Sample Input:
+MSH
+40000
+50000
+Sample Output:
+90000.00'''
+
+Ans:
+student_type = input().strip()
+tuition_fee = float(input())
+additional_fee = float(input())
+total_fee = 0.0
+if student_type == "MSDS":
+  total_fee = tuition_fee + additional_fee
+elif student_type == "MSH":
+  total_fee = tuition_fee + additional_fee
+elif student_type == "MGSDS":
+  total_fee = 1.5 * tuition_fee + additional_fee
+elif student_type == "MGSH":
+  total_fee = 1.5 * tuition_fee + additional_fee
+else:
+   print("Invalid student type")
+ print(f"{total_fee:.2f}")
+
+'''
+6)
+Ask a user for their birth year encoded as two digits (like "62") and for the current year, also encoded as two digits (like "99"). Write a program to find the users current age in years.
+Input format:
+Input consists of 2 integers
+The first integer corresponds to the last 2 digits of the birth year
+The second integer corresponds to the last 2 digits of the current year
+Output format:
+Print the user's current age
+Refer below sample output for formatting.
+Sample Input:
+62
+00
+Sample Output:
+38'''
+
+Ans:
+birth_year = int(input())
+current_year = int(input())
+full_birth_year = 1900 + birth_year if birth_year >= 50 else 2000 + birth_year
+full_current_year = 1900 + current_year if current_year >= 50 else 2000 + current_year
+age = full_current_year - full_birth_year
+print(age)
+
+'''7)
+There are 3 labs in the CSE department(L1, L2, and L3) with a seating capacity of x, y, and z respectively. Find the lab which has minimal seating capacity.  
+Input format:
+Input consists of 3 integers
+The first input denotes the seating capacity of L1(a)
+The second input denotes the seating capacity of L2(b)
+The third input denotes the seating capacity of L3(c)
+Output format:
+Print the minimal seating lab capacity
+Refer the Sample output for formatting
+Sample Input:
+30
+40
+20
+Sample Output:
+L3'''
+
+Ans :
+L1=int(input())
+L2=int(input())
+L3=int(input())
+if((L1<L2) and (L1<L3)):
+    print("L1")
+elif(L2<L3 and L2<L1):
+    print("L2")
+else:
+    print("L3")
+
+'''
+
+
+
+
+
+
+
 
 
 
